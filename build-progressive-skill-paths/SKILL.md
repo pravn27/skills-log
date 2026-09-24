@@ -1,6 +1,6 @@
 ---
 name: build-progressive-skill-paths
-description: Design clear, personalized, hands-on learning journeys for engineering, IT, digital, or other professional skills from beginner through intermediate, advanced, and expert practice. Explain every concept through What it is, Purpose, Why it is used, How it works, and When to use it. Use when an AI agent must create or improve a roadmap, curriculum, study plan, concept-by-concept tutorial sequence, lab plan, project ladder, reskilling path, or real-world implementation plan; select current high-quality resources; diagnose a learner's level; define measurable stage gates; or turn theory into job-relevant practice and portfolio evidence.
+description: Design clear, personalized, fundamentals-first, hands-on learning journeys for engineering, IT, digital, or other professional skills from beginner through intermediate, advanced, and expert practice. Explain every concept through What it is, Purpose, Why it is used, How it works, and When to use it. Use when an AI agent must create or improve a roadmap, curriculum, study plan, concept-by-concept tutorial sequence, lab plan, project ladder, reskilling path, or real-world implementation plan; select current high-quality resources; diagnose a learner's level; define measurable stage gates; or turn theory into job-relevant practice and portfolio evidence.
 ---
 
 # Build Progressive Skill Paths
@@ -13,6 +13,8 @@ Create one coherent path that moves a learner from understanding to independent,
 - Maintain one recommended path. Put alternatives in optional branches.
 - Teach each concept just before it is needed in practice.
 - Start every concept with `What -> Purpose -> Why -> How -> When`, then demonstrate and practice it.
+- Prioritize transferable fundamentals before framework-specific APIs. Present frameworks as useful abstractions over identifiable problems and mechanisms.
+- Use `80% fundamentals / 20% frameworks` as an adjustable early-stage planning heuristic, not a fixed quota or universal rule.
 - Move through `explain -> observe -> reproduce -> modify -> solve -> apply -> teach or defend`.
 - Increase task complexity and learner autonomy together.
 - Prefer short feedback loops, visible outputs, and realistic constraints.
@@ -61,6 +63,8 @@ Organize concepts into:
 
 Mark each concept as `must know`, `useful next`, or `specialization`. Remove topics that do not support the target use case.
 
+For technical, tool-heavy, or framework-based topics, always read [fundamentals-first.md](references/fundamentals-first.md). Select only the foundations required by the target use case, then map each major framework feature through `Fundamental -> Problem -> Minimal implementation -> Framework abstraction -> Benefit -> Failure mode -> Trade-off`.
+
 ### 4. Align with current practice
 
 For IT, engineering, digital, software, data, AI, or cybersecurity paths, read [industry-alignment-2026.md](references/industry-alignment-2026.md). Select only applicable frameworks. Never imply that every framework is a formal standard or that the ten-item set is an objective ranking.
@@ -82,6 +86,8 @@ Always read [mastery-levels.md](references/mastery-levels.md). Define Beginner, 
 
 Use `Intermediate` as the standard label; mention `Medium` once when mirroring user wording.
 
+Require evidence of underlying understanding at every stage. Framework fluency alone is insufficient when the learner cannot predict behavior, explain the abstraction, or debug where it leaks.
+
 ### 6. Build each concept module
 
 Read [concept-learning-loop.md](references/concept-learning-loop.md). For each concept, provide:
@@ -90,16 +96,18 @@ Read [concept-learning-loop.md](references/concept-learning-loop.md). For each c
 2. **Purpose** — state the job it exists to perform.
 3. **Why do we use it?** — name the problem, benefit, and trade-off.
 4. **How does it work?** — explain the mechanism, inputs, outputs, and data or control flow.
-5. **When should or should not it be used?** — give a decision boundary and alternatives.
-6. **Why now?** — connect it to the current stage and prerequisite.
-7. **Mental model** — add an analogy or diagram when it improves understanding.
-8. **Worked example** — show a correct example with reasoning.
-9. **Guided lab** — give exact steps and expected output.
-10. **Independent challenge** — vary one meaningful condition.
-11. **Real-world transfer** — use it inside the target scenario.
-12. **Debugging case** — identify and fix a realistic failure.
-13. **Retrieval check** — explain or perform without the guide.
-14. **Evidence and gate** — save an artifact and apply observable pass criteria.
+5. **Underlying fundamental** — identify the prerequisite, invariant, or mechanism beneath it.
+6. **Framework relationship** — when applicable, show what the framework abstracts, the benefit it provides, and where that abstraction can leak.
+7. **When should or should not it be used?** — give a decision boundary and alternatives.
+8. **Why now?** — connect it to the current stage and prerequisite.
+9. **Mental model** — add an analogy or diagram when it improves understanding.
+10. **Worked example** — show a correct example with reasoning.
+11. **Guided lab** — give exact steps and expected output.
+12. **Independent challenge** — vary one meaningful condition.
+13. **Real-world transfer** — use it inside the target scenario.
+14. **Debugging case** — identify and fix a realistic failure, including an abstraction leak when relevant.
+15. **Retrieval check** — explain or perform without the guide.
+16. **Evidence and gate** — save an artifact and apply observable pass criteria.
 
 Keep lessons small enough to finish in one focused session. End every session with a working state and the next concrete action.
 
@@ -118,6 +126,8 @@ Do not dump long link lists. Explain why each resource was selected, what to use
 ### 8. Add real-world execution
 
 Read [real-world-practice.md](references/real-world-practice.md). Build a project ladder from safe reproduction to ambiguous, end-to-end delivery. Include setup, acceptance criteria, constraints, tests, observability, security, documentation, rollback, and retrospective.
+
+Begin with a small foundational exercise that exposes the mechanism. Follow it with the framework-assisted version and a comparison. Assign an ambitious, integrated project only after the necessary foundation gates are met.
 
 Use simulations, local environments, sample data, or staging before live systems. Never equate a tutorial clone with independent capability.
 
@@ -141,7 +151,9 @@ Always read [roadmap-output-template.md](references/roadmap-output-template.md).
 
 - **Complete beginner:** define terms, minimize setup, use worked examples, and give fast visible wins.
 - **Experienced learner changing domains:** compress shared fundamentals and emphasize different assumptions, tools, and failure modes.
+- **Framework-heavy topic:** separate durable mental models from version-specific syntax and use an adaptive fundamentals-to-framework allocation.
 - **Workplace urgency:** teach the immediate use case first, then backfill reusable foundations.
+- **Career outcome:** include sustainable focused practice, peer feedback, evidence-based resilience, job-search ownership, and progressively ambitious projects from [fundamentals-first.md](references/fundamentals-first.md). Do not impose these habits on a non-career request.
 - **Certification goal:** map objectives to practical tasks; do not turn the plan into exam memorization only.
 - **Limited time:** reduce breadth before reducing practice or feedback.
 - **Low budget:** prefer official documentation, open curricula, local labs, and open-source projects.
@@ -154,6 +166,9 @@ Before delivering a path, verify that it:
 
 - has a clear destination and stated assumptions;
 - follows dependencies rather than popularity;
+- distinguishes durable fundamentals from tool or framework conveniences;
+- maps each major framework abstraction to its underlying problem, benefit, failure mode, and trade-off;
+- treats the 80/20 split as an adjustable heuristic supported by learner evidence;
 - explains every concept with What, Purpose, Why, How, and When before practice;
 - contains more doing than passive consumption after initial orientation;
 - pairs every important concept with practice and evidence;

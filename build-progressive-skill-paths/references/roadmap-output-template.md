@@ -30,20 +30,28 @@ List the final artifacts or demonstrations that will prove capability.
 
 Provide a short diagnostic with explanation, prediction, execution, and troubleshooting prompts. State what can be skipped when already demonstrated.
 
-## 4. Concept map
+## 4. Fundamentals and concept map
 
-| Order | Concept | Purpose | Why it matters | Depends on | Priority |
-|---:|---|---|---|---|---|
-| 1 | ... | ... | ... | ... | Must know / Useful next / Specialization |
+State the proposed fundamentals-to-framework allocation and why it fits the learner. Treat `80/20` as an adjustable starting heuristic, not a mandatory ratio.
+
+| Order | Fundamental or concept | Purpose | Why it matters | Framework mapping | Depends on | Priority |
+|---:|---|---|---|---|---|---|
+| 1 | ... | ... | ... | ... | ... | Must know / Useful next / Specialization |
+
+For framework-based topics, show the bridge explicitly:
+
+| Fundamental | Underlying problem | Minimal exercise | Framework abstraction | Benefit | Leak or failure | Trade-off |
+|---|---|---|---|---|---|---|
+| ... | ... | ... | ... | ... | ... | ... |
 
 ## 5. Four-stage journey
 
-| Stage | Outcomes | Core concepts | Hands-on work | Stage project | Exit evidence |
-|---|---|---|---|---|---|
-| Beginner | ... | ... | ... | ... | ... |
-| Intermediate | ... | ... | ... | ... | ... |
-| Advanced | ... | ... | ... | ... | ... |
-| Expert | ... | ... | ... | ... | ... |
+| Stage | Outcomes | Fundamentals evidence | Framework or applied use | Hands-on work | Stage project | Exit evidence |
+|---|---|---|---|---|---|---|
+| Beginner | ... | ... | ... | ... | ... | ... |
+| Intermediate | ... | ... | ... | ... | ... | ... |
+| Advanced | ... | ... | ... | ... | ... | ... |
+| Expert | ... | ... | ... | ... | ... | ... |
 
 ## 6. Concept modules
 
@@ -55,6 +63,11 @@ For each important concept:
 - Purpose
 - Why do we use it?
 - How does it work?
+- Underlying fundamental, prerequisite, or invariant
+- Smallest framework-free or basic demonstration
+- Framework mapping, when applicable
+- Benefit provided by the abstraction
+- Abstraction leak or realistic failure mode
 - When do we use it?
 - When should we not use it?
 - Related concepts and mental model
@@ -69,7 +82,7 @@ For each important concept:
 
 ## 7. Project ladder
 
-Describe progressive projects from reproduce and modify through end-to-end integration, troubleshooting, optimization, and expert leadership. Include acceptance criteria, tests, constraints, review, and safe environment.
+Describe progressive projects from reproduce and modify through end-to-end integration, troubleshooting, optimization, and expert leadership. Start with a minimal foundational slice, compare it with the framework-assisted solution, and assign an ambitious capstone only after the required foundation gates. Include acceptance criteria, tests, constraints, review, and safe environment.
 
 ## 8. Resource stack
 
@@ -96,6 +109,8 @@ Give milestone ranges. Provide a weekly pattern such as:
 - project integration;
 - feedback and correction;
 - evidence capture and planning.
+
+Explain the allocation between fundamentals, framework work, integration, and review. Do not force an exact 80/20 split when learner evidence supports a different balance. Use sustainable focused sessions rather than extreme-hour targets.
 
 Avoid promising expertise by a fixed date.
 

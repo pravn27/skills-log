@@ -20,6 +20,8 @@ Begin every concept with this card. Do not replace Purpose, Why, or How with a d
 | **Purpose** | State the specific job or responsibility the concept exists to perform. |
 | **Why do we use it?** | Name the problem it solves, the benefit it provides, and the important trade-off. |
 | **How does it work?** | Explain the mechanism, inputs, outputs, lifecycle, and data or control flow. |
+| **Underlying fundamental** | Identify the prerequisite, invariant, or durable principle that explains the behavior. |
+| **Framework relationship** | When applicable, name what the framework abstracts, the benefit it provides, and where the abstraction can leak. |
 | **When do we use it?** | Give recognizable conditions and a realistic use case. |
 | **When should we not use it?** | Name a boundary, misuse, or simpler alternative. |
 | **Related concepts** | Explain how it differs from or collaborates with adjacent concepts. |
@@ -34,6 +36,8 @@ Use concrete language. Replace “X is used for Y” with enough mechanism for t
 - **Purpose:** Hold local, changeable component data that affects what the component renders or how it behaves.
 - **Why do we use it?** A normal local variable in a function component does not persist reliably across renders, and changing it does not ask React to render again. State gives React a managed value and an update signal.
 - **How does it work?** A hook such as `useState` returns the current value and a setter. Calling the setter schedules an update; React renders the component again with the new state value.
+- **Underlying fundamental:** State represents data at a point in time; an event produces a state transition, and the resulting value determines the next output. JavaScript closures, value identity, and immutability affect how React observes those transitions.
+- **Framework relationship:** React manages update scheduling and DOM synchronization. The abstraction can leak through direct mutation, stale closures, unnecessary derived state, and misunderstood render timing.
 - **When do we use it?** Use it for component-owned values that change through interaction or time, such as an input value, open/closed status, or selected tab.
 - **When should we not use it?** Do not store a value that can be calculated directly from current props or other state. Avoid duplicating server or shared application data without a clear ownership reason.
 
@@ -50,6 +54,8 @@ function Counter() {
 - **Purpose:** Configure a child and pass data, callbacks, or renderable content through the component tree.
 - **Why do we use it?** Props make components reusable and keep ownership clear through one-way data flow: the parent owns the value and the child consumes it.
 - **How does it work?** The parent supplies JSX attributes. React passes them as an object to the child. The child reads them but does not mutate them; it requests changes through a callback when needed.
+- **Underlying fundamental:** Props are function inputs and component contracts. Read-only inputs and explicit ownership make data flow predictable.
+- **Framework relationship:** JSX and React's component model package these inputs as props. The abstraction can leak through prop drilling, unstable object identity, or unclear ownership.
 - **When do we use it?** Use props when a value or behavior is owned outside the component or when multiple instances need different configuration.
 - **When should we not use it?** Do not copy a prop into state unless the component intentionally needs an independent snapshot or editable draft.
 
@@ -72,7 +78,8 @@ The parent can keep a value in **state** and pass that value to a child as **pro
 ### 1. Connect
 
 - State the real problem the concept solves.
-- Link it to one prerequisite and the target use case.
+- Link it to one prerequisite, underlying invariant, and the target use case.
+- If a framework is involved, name the abstraction benefit and one way it can leak.
 - Show the result the learner will produce.
 
 ### 2. Explain and predict

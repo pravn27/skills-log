@@ -1,4 +1,4 @@
 interface:
   display_name: "Progressive Skill Mastery"
-  short_description: "Build why-first, hands-on mastery paths"
-  default_prompt: "Use $build-progressive-skill-paths to create a hands-on learning journey that explains every concept through What, Purpose, Why, How, and When."
+  short_description: "Build fundamentals-first hands-on mastery paths"
+  default_prompt: "Use $build-progressive-skill-paths to create a fundamentals-first, hands-on learning journey that explains every concept through What, Purpose, Why, How, and When before framework use."
