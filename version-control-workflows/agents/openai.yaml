@@ -1,0 +1,4 @@
+interface:
+  display_name: "Version Control Workflows"
+  short_description: "Learn and safely run Git collaboration workflows"
+  default_prompt: "Use $version-control-workflows to explain or safely perform this version-control task."

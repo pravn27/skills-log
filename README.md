@@ -8,6 +8,7 @@ A collection of reusable AI-agent skills for structured upskilling, career devel
 |---:|---|---|---|---|
 | 1 | [build-progressive-skill-paths](build-progressive-skill-paths/) | Build a fundamentals-first, Why-and-How upskilling journey with concept practice, projects, assessments, and measurable progression. | Beginner → Intermediate → Advanced → Expert | Available |
 | 2 | `interview-prep` | Prepare concept knowledge, practical exercises, interview questions, mock interviews, and improvement feedback for a target role. | Beginner → Intermediate → Advanced → Expert | Planned |
+| 3 | [version-control-workflows](version-control-workflows/) | Learn, inspect, troubleshoot, and safely execute Git and hosted version-control workflows across GitHub, GitLab, Bitbucket, Azure DevOps, self-hosted platforms, and other detected VCS tools. | Beginner → Intermediate → Advanced → Expert | Available |
 
 Add each new skill as the next numbered row. Link the skill name only after its directory and `SKILL.md` have been added.
 
@@ -34,6 +35,22 @@ It provides:
 - project ladders, assessments, evidence, and progress tracking;
 - alignment with selected 2026 industry frameworks and resources;
 - portable guidance for OpenAI Codex, Claude Code, Gemini CLI, and Grok.
+
+## Skill 3: Version Control Workflows
+
+Use [`version-control-workflows`](version-control-workflows/) to understand or safely perform repository and collaboration workflows without losing unrelated work or rewriting shared history unexpectedly.
+
+It provides:
+
+- concept-wise `What → Purpose → Why → How → When` explanations;
+- Beginner, Intermediate, Advanced, and Expert learning paths and evidence gates;
+- Git fundamentals, branching, merge, rebase, conflict, history, worktree, tag, and release guidance;
+- provider-specific modules for GitHub and GitLab;
+- adapters for Bitbucket, Azure DevOps, self-hosted Git forges, Mercurial, Subversion, and Perforce;
+- pull/merge request, code-review, CI-check, protected-branch, and collaboration guidance;
+- explicit authorization boundaries for commits, pushes, reviews, merges, releases, policy changes, history rewrites, and destructive recovery;
+- safe recovery guidance for reflog, revert, reset, clean, force-push, and secret exposure;
+- portable 2026 compatibility guidance for OpenAI Codex, Claude Code, Gemini CLI, and Grok.
 
 ## Repository structure
 
